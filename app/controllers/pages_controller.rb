@@ -6,4 +6,9 @@ class PagesController < ApplicationController
 	@edad = params[:edad]
   end
 
+  def guardar_registro
+ 	Registro.create(nombre: params[:nombre], email: params[:email], edad: params[:edad])
+ 	redirect_to pages_x_path, notice: "El usuario fue guardado"
+  end
+
 end

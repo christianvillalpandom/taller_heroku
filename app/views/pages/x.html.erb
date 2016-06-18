@@ -3,16 +3,12 @@
 <h1>Formulario</h1>
 
 
-<form method="get">
+<form method="POST" action="<%= pages_guardar_registro_path %>">
  <span>Nombre</span><input type="text" name="nombre"><br>
  <span>Email</span><input type="text" name="email"><br>
  <span>Edad</span><input type="number" name="edad"><br>
  <input type="submit"value="Enviar">
+ <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
 
-<h3>
-	Su nombre es: <%= @nombre %>,
-	 su mail es: <%= @email %>,
-	 su edad es :<%= @edad %>
-	 .
-</h3>
+<p class="alert alert-success"> <%= flash[:notice] %> </p>
