@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   post 'pages/guardar_registro'
 
+  get 'pages/landing'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

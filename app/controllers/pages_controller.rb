@@ -11,4 +11,8 @@ class PagesController < ApplicationController
  	redirect_to pages_x_path, notice: "El usuario fue guardado"
   end
 
+  def landing
+  	render layout: "landing"
+  end
+
 end
